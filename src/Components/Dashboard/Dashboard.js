@@ -18,7 +18,7 @@ const Dashboard = () => {
     const { isLoading, error, data: stockData, refetch } = useQuery({
         queryKey: ['stockDetails'],
         queryFn: () =>
-            fetch('https://sugar-server-site-mdtohid.vercel.app/stockDetails').then(
+            fetch('https://sugar-server-site-cgang5v3u-mdtohid.vercel.app/stockDetails').then(
                 (res) => res.json(),
             ),
     })
@@ -48,7 +48,7 @@ const Dashboard = () => {
             value: parseInt(data.stockPrice)
         }
 
-        await fetch("https://sugar-server-site-mdtohid.vercel.app/stock", {
+        await fetch("https://sugar-server-site-cgang5v3u-mdtohid.vercel.app/stock", {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Dashboard = () => {
     
 
     const handleMail = async (data) => {
-        await fetch(`https://sugar-server-site-mdtohid.vercel.app/sendEmail/${user.email}`, {
+        await fetch(`https://sugar-server-site-cgang5v3u-mdtohid.vercel.app/sendEmail/${user.email}`, {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
